@@ -28,5 +28,11 @@ Route::get('getsinglerecordbyid/{id}','App\Http\Controllers\FuelinventorydetailC
 
 //fueltype detail
 Route::get('getallfuelrecord', 'App\Http\Controllers\FualtypeController@getAllFuelType');
+Route::post('createfuelType/{id}','App\Http\Controllers\FualtypeController@createNewFuelType');
+Route::get('getallfuelrecordbyid/{id}', 'App\Http\Controllers\FualtypeController@getSingleFuelRecordById');
+
 //pump detail controller
 Route::get('getallpumprecord', 'App\Http\Controllers\PumbertypeController@getAllPumperType');
+Route::post('createPumb/{id}', 'App\Http\Controllers\PumbertypeController@createNewPumb');
+Route::get('getallPumbrecordbyid/{id}', 'App\Http\Controllers\PumbertypeController@getSinglePumbRecordById');
+Route::get('getallPumbrecordbyfuelcode/{fuelcode}', 'App\Http\Controllers\PumbertypeController@getPumbRecordByFuelCode');
